@@ -288,6 +288,7 @@
             inserir.TabIndex = 25;
             inserir.Text = "INSERIR";
             inserir.UseVisualStyleBackColor = true;
+            inserir.Click += inserir_Click_1;
             // 
             // atualizar
             // 
@@ -341,6 +342,7 @@
             limpar.TabIndex = 31;
             limpar.Text = "LIMPAR";
             limpar.UseVisualStyleBackColor = true;
+            limpar.Click += limpar_Click;
             // 
             // Form1
             // 

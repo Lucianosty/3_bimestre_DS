@@ -45,7 +45,7 @@ namespace conexao_banco
                 else //se nao ele vai falar que nao foi encontrado
                 {
                     MessageBox.Show("Cliente não encontrado!");
-                    //LimparCampos();
+                    limpar_campos();
                 }
                 reader.Close(); //fechando a leitura
                 conechao.Close(); //fechando a conechao, sempre feche isso 
@@ -55,13 +55,45 @@ namespace conexao_banco
 
         private void inserir_Click(object sender, EventArgs e)
         {
+          
+        }
+
+        private void limpar_campos()
+        {
+            nome.Clear();
+            telefone.Clear();
+            cidade.Clear();
+            bairro.Clear();
+            rua.Clear();
+            id.Clear();
+            estado.Clear();
+            cep.Clear();
+
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+            checkBox5.Checked = false;
+            checkBox6.Checked = false;
+            checkBox7.Checked = false;
+            checkBox8.Checked = false;
+
+        }
+
+        private void limpar_Click(object sender, EventArgs e)
+        {
+            limpar_campos();
+        }
+
+        private void inserir_Click_1(object sender, EventArgs e)
+        {
             using (MySqlConnection conechao = new MySqlConnection(textoparaconexao))
             {
-                conechao.Open();
+                conechao.Open(); //Abrindo a conexao
                 string botalah = "INSERT INTO Cliente (Nom_Cli, Tel_Cli, Rua_Cli, Bai_Cli, Cid_Cli, Est_Cli, CEP_Cli) " +
-                    "VALUES (@nome, @telefone, @rua, @bairro, @cidade, @estado, @cep)";
-                MySqlCommand comandito = new MySqlCommand(botalah, conechao);
-                comandito.Parameters.AddWithValue("@Nome", nome.Text);
+                    "VALUES (@nome, @telefone, @rua, @bairro, @cidade, @estado, @cep)"; //Negocio de banco de dados e
+                MySqlCommand comandito = new MySqlCommand(botalah, conechao); //criando uma nova variavel colocando o botalah no conechao
+                comandito.Parameters.AddWithValue("@Nome", nome.Text); //o que voce vai adicionar no nome vai colocar no banco de dados
                 comandito.Parameters.AddWithValue("@Telefone", telefone.Text);
                 comandito.Parameters.AddWithValue("@Rua", rua.Text);
                 comandito.Parameters.AddWithValue("@Bairro", bairro.Text);
@@ -69,9 +101,9 @@ namespace conexao_banco
                 comandito.Parameters.AddWithValue("@Estado", estado.Text);
                 comandito.Parameters.AddWithValue("@CEP", cep.Text);
                 comandito.ExecuteNonQuery();
-                MessageBox.Show("Cliente inserido com sucesso!");
-                conechao.Close();
-                //LimparCampos();
+                MessageBox.Show("Cliente inserido com sucesso!"); //Cadastrou o usuario
+                conechao.Close(); //Fechar a conexao
+                limpar_campos();
             }
         }
     }
