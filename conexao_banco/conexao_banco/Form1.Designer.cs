@@ -307,6 +307,7 @@
             excluir.TabIndex = 27;
             excluir.Text = "EXCLUIR";
             excluir.UseVisualStyleBackColor = true;
+            excluir.Click += excluir_Click;
             // 
             // label9
             // 

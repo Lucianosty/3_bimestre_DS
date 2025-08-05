@@ -55,7 +55,7 @@ namespace conexao_banco
 
         private void inserir_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void limpar_campos()
@@ -87,24 +87,38 @@ namespace conexao_banco
 
         private void inserir_Click_1(object sender, EventArgs e)
         {
-            using (MySqlConnection conechao = new MySqlConnection(textoparaconexao))
+            var ola = nome.Text.Length > 0 && telefone.Text.Length > 0 && rua.Text.Length > 0 && bairro.Text.Length > 0 && cidade.Text.Length > 0 && estado.Text.Length > 0 && cep.Text.Length > 0;
+            if (ola)
             {
-                conechao.Open(); //Abrindo a conexao
-                string botalah = "INSERT INTO Cliente (Nom_Cli, Tel_Cli, Rua_Cli, Bai_Cli, Cid_Cli, Est_Cli, CEP_Cli) " +
-                    "VALUES (@nome, @telefone, @rua, @bairro, @cidade, @estado, @cep)"; //Negocio de banco de dados e
-                MySqlCommand comandito = new MySqlCommand(botalah, conechao); //criando uma nova variavel colocando o botalah no conechao
-                comandito.Parameters.AddWithValue("@Nome", nome.Text); //o que voce vai adicionar no nome vai colocar no banco de dados
-                comandito.Parameters.AddWithValue("@Telefone", telefone.Text);
-                comandito.Parameters.AddWithValue("@Rua", rua.Text);
-                comandito.Parameters.AddWithValue("@Bairro", bairro.Text);
-                comandito.Parameters.AddWithValue("@Cidade", cidade.Text);
-                comandito.Parameters.AddWithValue("@Estado", estado.Text);
-                comandito.Parameters.AddWithValue("@CEP", cep.Text);
-                comandito.ExecuteNonQuery();
-                MessageBox.Show("Cliente inserido com sucesso!"); //Cadastrou o usuario
-                conechao.Close(); //Fechar a conexao
-                limpar_campos();
+                using (MySqlConnection conechao = new MySqlConnection(textoparaconexao))
+                {
+                    conechao.Open(); //Abrindo a conexao
+                    string botalah = "INSERT INTO Cliente (Nom_Cli, Tel_Cli, Rua_Cli, Bai_Cli, Cid_Cli, Est_Cli, CEP_Cli) " +
+                        "VALUES (@nome, @telefone, @rua, @bairro, @cidade, @estado, @cep)"; //Negocio de banco de dados e
+                    MySqlCommand comandito = new MySqlCommand(botalah, conechao); //criando uma nova variavel colocando o botalah no conechao
+                    comandito.Parameters.AddWithValue("@Nome", nome.Text); //o que voce vai adicionar no nome vai colocar no banco de dados
+                    comandito.Parameters.AddWithValue("@Telefone", telefone.Text);
+                    comandito.Parameters.AddWithValue("@Rua", rua.Text);
+                    comandito.Parameters.AddWithValue("@Bairro", bairro.Text);
+                    comandito.Parameters.AddWithValue("@Cidade", cidade.Text);
+                    comandito.Parameters.AddWithValue("@Estado", estado.Text);
+                    comandito.Parameters.AddWithValue("@CEP", cep.Text);
+                    comandito.ExecuteNonQuery();
+                    MessageBox.Show("Cliente inserido com sucesso!"); //Cadastrou o usuario
+                    conechao.Close(); //Fechar a conexao
+                    limpar_campos();
+                }
             }
+            else
+            {
+                MessageBox.Show("Coloque os campos corretamente!");
+            }
+
+        }
+
+        private void excluir_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
