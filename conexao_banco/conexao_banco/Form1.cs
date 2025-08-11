@@ -118,7 +118,151 @@ namespace conexao_banco
 
         private void excluir_Click(object sender, EventArgs e)
         {
+            DialogResult resultado = MessageBox.Show("Tem certeza que deseja excluir este cliente?", "Confirmação de Exclusão", MessageBoxButtons.YesNo);
+            if (resultado == DialogResult.Yes)
+            {
+                using (MySqlConnection conechao = new MySqlConnection(textoparaconexao))
+                {
+                    conechao.Open();
+                    string apagala = "DELETE FROM Cliente WHERE ID_Cli = @ID";
+                    MySqlCommand comandito = new MySqlCommand(apagala, conechao);
+                    comandito.Parameters.AddWithValue("@ID", id.Text);
+                    int rowsAffected = comandito.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Cliente excluído com sucesso!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cliente não encontrado!");
+                    }
+                    conechao.Close();
+                    limpar_campos();
+                }
+            }
+        }
 
+        private void tudo_Click(object sender, EventArgs e)
+        {
+
+            string oiala = "";
+            string tudo = "";   //colocando todas as respostas na string tudo
+            string id_var = id.Text; //Vai pegar as respostas de todos os campos
+            string nome_var = nome.Text;
+            string telefone_var = telefone.Text;
+            string rua_var = rua.Text;
+            string bairro_var = bairro.Text;
+            string cidade_var = cidade.Text;
+            string estado_var = estado.Text;
+            string cep_var = cep.Text;
+            textBox9.Multiline = true; //Se caso nao ficar em multilinha na text box
+            using (MySqlConnection conechao = new MySqlConnection(textoparaconexao)) //criando a conexao do banco de dados
+            {
+                conechao.Open(); //mandando abrir
+                MySqlCommand comandito = new MySqlCommand(oiala, conechao);
+                if (checkBox1.Checked) //Se o chekbox for marcado ele pega a informacao do 1 quadro
+                {
+                    oiala = "SELECT* FROM Cliente WHERE ID_Cli = @ID"; //selecionando o campo
+                    comandito = new MySqlCommand(oiala, conechao); //mandando executar a instrucao
+                    comandito.Parameters.AddWithValue("@ID", id.Text); //a resposta vai estar dentro do reader
+                }
+                else if (checkBox2.Checked)
+                {
+                    oiala = "SELECT* FROM Cliente WHERE Nom_Cli = @Nome";
+                    comandito = new MySqlCommand(oiala, conechao);
+                    comandito.Parameters.AddWithValue("@Nome", nome.Text);
+                }
+                else if (checkBox3.Checked)
+                {
+                    oiala = "SELECT* FROM Cliente WHERE Tel_Cli = @Telefone";
+                    comandito = new MySqlCommand(oiala, conechao);
+                    comandito.Parameters.AddWithValue("@Telefone", telefone.Text);
+                }
+                else if (checkBox4.Checked)
+                {
+                    oiala = "SELECT* FROM Cliente WHERE Rua_Cli = @Rua";
+                    comandito = new MySqlCommand(oiala, conechao);
+                    comandito.Parameters.AddWithValue("@Rua", rua.Text);
+                }
+                else if (checkBox5.Checked)
+                {
+                    oiala = "SELECT* FROM Cliente WHERE Bai_Cli = @Bairro";
+                    comandito = new MySqlCommand(oiala, conechao);
+                    comandito.Parameters.AddWithValue("@Bairro", bairro.Text);
+                }
+                else if (checkBox6.Checked)
+                {
+                    oiala = "SELECT* FROM Cliente WHERE Cid_Cli = @Cidade";
+                    comandito = new MySqlCommand(oiala, conechao);
+                    comandito.Parameters.AddWithValue("@Cidade", cidade.Text);
+                }
+                else if (checkBox7.Checked)
+                {
+                    oiala = "SELECT* FROM Cliente WHERE Est_Cli = @Estado";
+                    comandito = new MySqlCommand(oiala, conechao);
+                    comandito.Parameters.AddWithValue("@Estado", estado.Text);
+                }
+                else if (checkBox8.Checked)
+                {
+                    oiala = "SELECT* FROM Cliente WHERE CEP_Cli = @CEP";
+                    comandito = new MySqlCommand(oiala, conechao);
+                    comandito.Parameters.AddWithValue("@CEP", cep.Text);
+                }
+                else //se ele nao marcou nada
+                {
+                    oiala = "SELECT * FROM Cliente";
+                    comandito = new MySqlCommand(oiala, conechao);
+
+                }
+
+                using (MySqlDataReader reader = comandito.ExecuteReader())
+                {
+                    while (reader.Read()) //Tipo um feat assoc por isso ele ta numa repeticao
+                    {
+                        id_var = reader.GetInt32("ID_Cli").ToString(); //Ele converte o dado por campo 
+                        nome_var = reader.GetString("Nom_Cli");
+                        telefone_var = reader.GetString("Tel_Cli");
+                        rua_var = reader.GetString("Rua_Cli");
+                        bairro_var = reader.GetString("Bai_Cli");
+                        cidade_var = reader.GetString("Cid_Cli");
+                        estado_var = reader.GetString("Est_Cli");
+                        cep_var = reader.GetString("CEP_Cli");
+
+
+                        tudo = tudo + id_var + "\r\n" + nome_var + "\r\n" + telefone_var + "\r\n" + rua_var + "\r\n" + bairro_var + "\r\n" + cidade_var + "\r\n" + estado_var + "\r\n" + cep_var + "\r\n\r\n"; //tudo = tudo mais todas as informacoes
+                                                                                                                                                                               //retorna e pula de linha, retorna e pula de linha, no final ele pula duas vezes para um ficar em branco e a outra por cep
+                    }
+                    textBox9.Text = tudo; //preenche a textbox 9 com tudo
+                }
+                conechao.Close();
+            }
+
+
+        }
+
+        private void atualizar_Click(object sender, EventArgs e)
+        {
+            using (MySqlConnection conechao = new MySqlConnection(textoparaconexao))
+            {
+                conechao.Open();
+                string tualizala = "UPDATE Cliente SET Nom_Cli = @Nome, Tel_Cli = @Telefone, Rua_Cli = @Rua, " +
+                                     "Bai_Cli = @Bairro, Cid_Cli = @Cidade, Est_Cli = @Estado, CEP_Cli = @CEP " +
+                                     "WHERE ID_Cli = @ID";
+                MySqlCommand comandito = new MySqlCommand(tualizala, conechao);
+                comandito.Parameters.AddWithValue("@Nome", id.Text);
+                comandito.Parameters.AddWithValue("@Telefone", telefone.Text);
+                comandito.Parameters.AddWithValue("@Rua", rua.Text);
+                comandito.Parameters.AddWithValue("@Bairro", bairro.Text);
+                comandito.Parameters.AddWithValue("@Cidade", cidade.Text);
+                comandito.Parameters.AddWithValue("@Estado", estado.Text);
+                comandito.Parameters.AddWithValue("@CEP", cep.Text);
+                comandito.Parameters.AddWithValue("@ID", id.Text);
+                comandito.ExecuteNonQuery();
+                MessageBox.Show("Cliente atualizado com sucesso!");
+                conechao.Close();
+                limpar_campos();
+            }
         }
     }
 }
+

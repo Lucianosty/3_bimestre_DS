@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            id = new TextBox();
             label2 = new Label();
             telefone = new TextBox();
             label3 = new Label();
@@ -60,6 +59,7 @@
             textBox9 = new TextBox();
             tudo = new Button();
             limpar = new Button();
+            id = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -70,13 +70,6 @@
             label1.Size = new Size(18, 15);
             label1.TabIndex = 0;
             label1.Text = "ID";
-            // 
-            // id
-            // 
-            id.Location = new Point(44, 53);
-            id.Name = "id";
-            id.Size = new Size(100, 23);
-            id.TabIndex = 1;
             // 
             // label2
             // 
@@ -298,6 +291,7 @@
             atualizar.TabIndex = 26;
             atualizar.Text = "ATUALIZAR";
             atualizar.UseVisualStyleBackColor = true;
+            atualizar.Click += atualizar_Click;
             // 
             // excluir
             // 
@@ -334,6 +328,7 @@
             tudo.TabIndex = 30;
             tudo.Text = "TUDO";
             tudo.UseVisualStyleBackColor = true;
+            tudo.Click += tudo_Click;
             // 
             // limpar
             // 
@@ -345,11 +340,19 @@
             limpar.UseVisualStyleBackColor = true;
             limpar.Click += limpar_Click;
             // 
+            // id
+            // 
+            id.Location = new Point(44, 56);
+            id.Name = "id";
+            id.Size = new Size(100, 23);
+            id.TabIndex = 32;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1026, 448);
+            Controls.Add(id);
             Controls.Add(limpar);
             Controls.Add(tudo);
             Controls.Add(textBox9);
@@ -380,7 +383,6 @@
             Controls.Add(label3);
             Controls.Add(telefone);
             Controls.Add(label2);
-            Controls.Add(id);
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
@@ -392,7 +394,6 @@
         #endregion
 
         private Label label1;
-        private TextBox id;
         private Label label2;
         private TextBox telefone;
         private Label label3;
@@ -423,5 +424,6 @@
         private TextBox textBox9;
         private Button tudo;
         private Button limpar;
+        private TextBox id;
     }
 }
