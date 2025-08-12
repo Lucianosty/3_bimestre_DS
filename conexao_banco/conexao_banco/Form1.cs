@@ -249,7 +249,7 @@ namespace conexao_banco
                                      "Bai_Cli = @Bairro, Cid_Cli = @Cidade, Est_Cli = @Estado, CEP_Cli = @CEP " +
                                      "WHERE ID_Cli = @ID";
                 MySqlCommand comandito = new MySqlCommand(tualizala, conechao);
-                comandito.Parameters.AddWithValue("@Nome", id.Text);
+                comandito.Parameters.AddWithValue("@Nome", nome.Text);
                 comandito.Parameters.AddWithValue("@Telefone", telefone.Text);
                 comandito.Parameters.AddWithValue("@Rua", rua.Text);
                 comandito.Parameters.AddWithValue("@Bairro", bairro.Text);
