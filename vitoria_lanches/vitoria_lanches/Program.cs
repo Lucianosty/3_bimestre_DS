@@ -5,6 +5,16 @@ namespace vitoria_lanches
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
+        /// 
+
+        private const string localhost = "localhost";
+        private const string usuario = "root";
+        private const string senha = "root";
+        private const string database = "bd_vitoria_lanches";
+
+        public static string conexao=$"server={localhost}; user_id={usuario}; password{senha}; database{database}";
+    
+
         [STAThread]
         static void Main()
         {
