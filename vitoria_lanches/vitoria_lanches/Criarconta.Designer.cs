@@ -37,25 +37,27 @@
             // 
             // txtSenhaLog
             // 
-            txtSenhaLog.Location = new Point(309, 146);
+            txtSenhaLog.Font = new Font("Segoe UI", 12F);
+            txtSenhaLog.Location = new Point(149, 197);
+            txtSenhaLog.Multiline = true;
             txtSenhaLog.Name = "txtSenhaLog";
-            txtSenhaLog.Size = new Size(183, 23);
+            txtSenhaLog.Size = new Size(183, 29);
             txtSenhaLog.TabIndex = 8;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(370, 122);
+            label3.Font = new Font("Segoe UI", 20F);
+            label3.Location = new Point(197, 157);
             label3.Name = "label3";
-            label3.Size = new Size(53, 21);
+            label3.Size = new Size(89, 37);
             label3.TabIndex = 7;
             label3.Text = "Senha";
             // 
             // txtNomelog
             // 
             txtNomelog.Font = new Font("Segoe UI", 12F);
-            txtNomelog.Location = new Point(309, 57);
+            txtNomelog.Location = new Point(149, 111);
             txtNomelog.Name = "txtNomelog";
             txtNomelog.Size = new Size(183, 29);
             txtNomelog.TabIndex = 6;
@@ -64,18 +66,19 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(343, 33);
+            label2.Font = new Font("Segoe UI", 20F);
+            label2.Location = new Point(143, 68);
             label2.Name = "label2";
-            label2.Size = new Size(118, 21);
+            label2.Size = new Size(203, 37);
             label2.TabIndex = 5;
             label2.Text = "Nome do Login";
             // 
             // btnCriarConta
             // 
-            btnCriarConta.Location = new Point(365, 222);
+            btnCriarConta.Font = new Font("Segoe UI", 16F);
+            btnCriarConta.Location = new Point(164, 256);
             btnCriarConta.Name = "btnCriarConta";
-            btnCriarConta.Size = new Size(75, 23);
+            btnCriarConta.Size = new Size(159, 38);
             btnCriarConta.TabIndex = 9;
             btnCriarConta.Text = "Criar conta";
             btnCriarConta.UseVisualStyleBackColor = true;

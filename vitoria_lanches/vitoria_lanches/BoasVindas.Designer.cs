@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BoasVindas));
             label1 = new Label();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -36,20 +37,20 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(12, 157);
+            label1.Font = new Font("Segoe UI", 25F);
+            label1.Location = new Point(31, 27);
             label1.Name = "label1";
-            label1.Size = new Size(215, 21);
+            label1.Size = new Size(479, 46);
             label1.TabIndex = 0;
-            label1.Text = "Bem vindo ao Vitória Lanches";
+            label1.Text = "Bem vindo ao Vitória Lanches!!\r\n";
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.gifComeco;
-            pictureBox1.Location = new Point(270, 12);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(52, 85);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(307, 431);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.Size = new Size(393, 353);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
@@ -58,8 +59,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox1);
             Controls.Add(label1);
+            Controls.Add(pictureBox1);
             Name = "BoasVindas";
             Text = "BoasVindas";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

@@ -14,6 +14,7 @@ namespace vitoria_lanches
             {
                 "FormBoasVindas" => new BoasVindas(),
                 "FormCriarconta" => new Criarconta(),
+                "FormCadProd" => new CadProd(),
 
                 // Adicione outros formulários aqui
                 _ => throw new ArgumentException("Formulário não reconhecido.")
@@ -42,6 +43,10 @@ namespace vitoria_lanches
             CarregarPanel("FormBoasVindas"); // Chama o método inicial ao carregar o formulário principal
         }
 
+        private void btnProduto_Click(object sender, EventArgs e)
+        {
+            CarregarPanel("FormCadProd");
+        }
     }
 }
 

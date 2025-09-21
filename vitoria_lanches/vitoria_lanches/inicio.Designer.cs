@@ -39,10 +39,10 @@
             // 
             // btnEntrar
             // 
-            btnEntrar.Font = new Font("Segoe UI", 12F);
-            btnEntrar.Location = new Point(219, 28);
+            btnEntrar.Font = new Font("Segoe UI", 20F);
+            btnEntrar.Location = new Point(25, 113);
             btnEntrar.Name = "btnEntrar";
-            btnEntrar.Size = new Size(111, 39);
+            btnEntrar.Size = new Size(156, 68);
             btnEntrar.TabIndex = 1;
             btnEntrar.Text = "Entrar";
             btnEntrar.UseVisualStyleBackColor = true;
@@ -54,17 +54,17 @@
             panel1.Controls.Add(button1);
             panel1.Controls.Add(btnProduto);
             panel1.Controls.Add(btnEntrar);
-            panel1.Location = new Point(0, 32);
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 88);
+            panel1.Size = new Size(209, 449);
             panel1.TabIndex = 3;
             // 
             // btnInicio
             // 
-            btnInicio.Font = new Font("Segoe UI", 12F);
-            btnInicio.Location = new Point(72, 34);
+            btnInicio.Font = new Font("Segoe UI", 20F);
+            btnInicio.Location = new Point(25, 26);
             btnInicio.Name = "btnInicio";
-            btnInicio.Size = new Size(90, 33);
+            btnInicio.Size = new Size(156, 67);
             btnInicio.TabIndex = 6;
             btnInicio.Text = "Inicio";
             btnInicio.UseVisualStyleBackColor = true;
@@ -72,36 +72,37 @@
             // 
             // button1
             // 
-            button1.Font = new Font("Segoe UI", 12F);
-            button1.Location = new Point(462, 28);
+            button1.Font = new Font("Segoe UI", 20F);
+            button1.Location = new Point(25, 197);
             button1.Name = "button1";
-            button1.Size = new Size(85, 37);
+            button1.Size = new Size(156, 68);
             button1.TabIndex = 5;
             button1.Text = "Pedido";
             button1.UseVisualStyleBackColor = true;
             // 
             // btnProduto
             // 
-            btnProduto.Font = new Font("Segoe UI", 12F);
-            btnProduto.Location = new Point(345, 26);
+            btnProduto.Font = new Font("Segoe UI", 20F);
+            btnProduto.Location = new Point(25, 287);
             btnProduto.Name = "btnProduto";
-            btnProduto.Size = new Size(111, 39);
+            btnProduto.Size = new Size(156, 68);
             btnProduto.TabIndex = 4;
             btnProduto.Text = "Produtos";
             btnProduto.UseVisualStyleBackColor = true;
+            btnProduto.Click += btnProduto_Click;
             // 
             // panel2
             // 
-            panel2.Location = new Point(3, 123);
+            panel2.Location = new Point(215, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(797, 315);
+            panel2.Size = new Size(585, 449);
             panel2.TabIndex = 4;
             // 
             // inicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(803, 450);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "inicio";

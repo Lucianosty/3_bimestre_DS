@@ -33,6 +33,7 @@ namespace vitoria_lanches
 
                 using (MySqlConnection mySqlConnection = new MySqlConnection(Program.conexao))
                 {
+                    mySqlConnection.Open();
                     string sql = "INSERT INTO tb_usuarios (TB_USUARIOS_USERNAME, TB_USUARIOS_PASSWORD, TB_USUARIOS_TIPO) VALUES (@vNome, @vSenha, @vTipo)";
                     using (MySqlCommand cmd = new MySqlCommand(sql, mySqlConnection))
                     {
@@ -41,7 +42,7 @@ namespace vitoria_lanches
                         cmd.Parameters.AddWithValue("@vTipo", vTipo);
                         cmd.ExecuteNonQuery();
                     }
-                    MessageBox.Show("Sua conta foi criada");
+                    MessageBox.Show("Sua conta foi criada!");
                     return true;
                 }
             }
@@ -59,13 +60,23 @@ namespace vitoria_lanches
 
         private void btnCriarConta_Click(object sender, EventArgs e)
         {
-            if (CriarConta())
+            if (!string.IsNullOrWhiteSpace(txtNomelog.Text) && !string.IsNullOrWhiteSpace(txtSenhaLog.Text))
             {
-                MessageBox.Show("Sua conta foi criada");
+                vNome = txtNomelog.Text;
+                vSenha = txtSenhaLog.Text;
+
+                if (CriarConta())
+                {
+                    MessageBox.Show("Sua conta foi criada");
+                }
+                else
+                {
+                    MessageBox.Show("Sua conta não foi criada!");
+                }
             }
             else
             {
-                MessageBox.Show("error");
+                MessageBox.Show("Preencha todos os campos corretamente");
             }
         }
     }

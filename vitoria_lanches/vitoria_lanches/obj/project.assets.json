@@ -1609,23 +1609,23 @@
     ]
   },
   "packageFolders": {
-    "D:\\home\\luciano_24052\\.nuget\\packages\\": {},
+    "C:\\Users\\Lu\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "U:\\DS CRISTIANO\\3_bimestre\\vitoria_lanches\\vitoria_lanches\\vitoria_lanches.csproj",
+      "projectUniqueName": "L:\\Exercicios\\3_bimestre_DS-main\\vitoria_lanches\\vitoria_lanches\\vitoria_lanches.csproj",
       "projectName": "vitoria_lanches",
-      "projectPath": "U:\\DS CRISTIANO\\3_bimestre\\vitoria_lanches\\vitoria_lanches\\vitoria_lanches.csproj",
-      "packagesPath": "D:\\home\\luciano_24052\\.nuget\\packages\\",
-      "outputPath": "U:\\DS CRISTIANO\\3_bimestre\\vitoria_lanches\\vitoria_lanches\\obj\\",
+      "projectPath": "L:\\Exercicios\\3_bimestre_DS-main\\vitoria_lanches\\vitoria_lanches\\vitoria_lanches.csproj",
+      "packagesPath": "C:\\Users\\Lu\\.nuget\\packages\\",
+      "outputPath": "L:\\Exercicios\\3_bimestre_DS-main\\vitoria_lanches\\vitoria_lanches\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "D:\\home\\luciano_24052\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1634,7 +1634,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1651,9 +1650,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
+        "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -1683,7 +1682,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
