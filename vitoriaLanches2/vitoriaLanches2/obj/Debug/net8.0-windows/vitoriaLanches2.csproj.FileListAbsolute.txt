@@ -35,3 +35,4 @@ U:\DS CRISTIANO\3_bimestre\vitoriaLanches2\vitoriaLanches2\bin\Debug\net8.0-wind
 U:\DS CRISTIANO\3_bimestre\vitoriaLanches2\vitoriaLanches2\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 U:\DS CRISTIANO\3_bimestre\vitoriaLanches2\vitoriaLanches2\obj\Debug\net8.0-windows\vitoriaLanches2.csproj.AssemblyReference.cache
 U:\DS CRISTIANO\3_bimestre\vitoriaLanches2\vitoriaLanches2\obj\Debug\net8.0-windows\vitoriaL.72FBF247.Up2Date
+U:\DS CRISTIANO\3_bimestre\vitoriaLanches2\vitoriaLanches2\obj\Debug\net8.0-windows\vitoriaLanches2.login.resources

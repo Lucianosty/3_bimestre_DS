@@ -17,6 +17,7 @@ namespace vitoriaLanches2
             {
                 "FormBoasVindas" => new boasvindas(),
                 "FormCriarconta" => new cadastro(),
+                "FormLogin" => new login(),
 
 
                 // Adicione outros formulários aqui
@@ -49,6 +50,11 @@ namespace vitoriaLanches2
         private void Form1_Load(object sender, EventArgs e)
         {
             CarregarPanel("FormBoasVindas");
+        }
+
+        private void btnLog_Click(object sender, EventArgs e)
+        {
+            CarregarPanel("FormLogin");
         }
     }
 }

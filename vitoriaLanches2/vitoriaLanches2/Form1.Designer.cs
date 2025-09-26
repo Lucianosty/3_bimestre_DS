@@ -32,11 +32,13 @@
             button2 = new Button();
             button1 = new Button();
             panel2 = new Panel();
+            btnLog = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(btnLog);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Location = new Point(3, 3);
@@ -72,6 +74,16 @@
             panel2.Size = new Size(561, 449);
             panel2.TabIndex = 1;
             // 
+            // btnLog
+            // 
+            btnLog.Location = new Point(61, 189);
+            btnLog.Name = "btnLog";
+            btnLog.Size = new Size(112, 23);
+            btnLog.TabIndex = 2;
+            btnLog.Text = "Login";
+            btnLog.UseVisualStyleBackColor = true;
+            btnLog.Click += btnLog_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -92,5 +104,6 @@
         private Button button2;
         private Button button1;
         private Panel panel2;
+        private Button btnLog;
     }
 }
