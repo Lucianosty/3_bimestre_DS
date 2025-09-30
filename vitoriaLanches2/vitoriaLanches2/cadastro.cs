@@ -51,7 +51,12 @@ namespace vitoriaLanches2
             {
                 MessageBox.Show("Cliente não inserido!");
             }
-            
+
         }
+
+        private void textsenha_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
+}

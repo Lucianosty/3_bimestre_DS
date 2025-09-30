@@ -39,49 +39,65 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(347, 60);
+            label1.Font = new Font("Impact", 24.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(248, 180, 0);
+            label1.Location = new Point(303, 56);
             label1.Name = "label1";
-            label1.Size = new Size(54, 15);
+            label1.Size = new Size(142, 41);
             label1.TabIndex = 0;
             label1.Text = "Cadastro";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(355, 109);
+            label2.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.FromArgb(248, 180, 0);
+            label2.Location = new Point(310, 118);
             label2.Name = "label2";
-            label2.Size = new Size(37, 15);
+            label2.Size = new Size(124, 25);
             label2.TabIndex = 1;
-            label2.Text = "Login";
+            label2.Text = "Username";
             // 
             // textlogin
             // 
-            textlogin.Location = new Point(326, 141);
+            textlogin.Font = new Font("Verdana", 15F);
+            textlogin.Location = new Point(289, 158);
+            textlogin.Multiline = true;
             textlogin.Name = "textlogin";
-            textlogin.Size = new Size(100, 23);
+            textlogin.Size = new Size(175, 34);
             textlogin.TabIndex = 2;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(355, 209);
+            label3.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.FromArgb(248, 180, 0);
+            label3.Location = new Point(335, 211);
             label3.Name = "label3";
-            label3.Size = new Size(39, 15);
+            label3.Size = new Size(80, 25);
             label3.TabIndex = 3;
             label3.Text = "Senha";
             // 
             // textsenha
             // 
-            textsenha.Location = new Point(326, 249);
+            textsenha.Font = new Font("Verdana", 15F);
+            textsenha.Location = new Point(289, 248);
+            textsenha.Multiline = true;
             textsenha.Name = "textsenha";
-            textsenha.Size = new Size(100, 23);
+            textsenha.Size = new Size(175, 34);
             textsenha.TabIndex = 4;
+            textsenha.TextChanged += textsenha_TextChanged;
             // 
             // btncadastrar
             // 
-            btncadastrar.Location = new Point(338, 314);
+            btncadastrar.FlatAppearance.BorderSize = 0;
+            btncadastrar.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 57, 43);
+            btncadastrar.FlatStyle = FlatStyle.Flat;
+            btncadastrar.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btncadastrar.ForeColor = Color.FromArgb(248, 180, 0);
+            btncadastrar.Location = new Point(311, 312);
             btncadastrar.Name = "btncadastrar";
-            btncadastrar.Size = new Size(75, 23);
+            btncadastrar.Size = new Size(134, 41);
             btncadastrar.TabIndex = 5;
             btncadastrar.Text = "Cadastrar";
             btncadastrar.UseVisualStyleBackColor = true;
@@ -91,6 +107,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(43, 39, 39);
             ClientSize = new Size(800, 450);
             Controls.Add(btncadastrar);
             Controls.Add(textsenha);

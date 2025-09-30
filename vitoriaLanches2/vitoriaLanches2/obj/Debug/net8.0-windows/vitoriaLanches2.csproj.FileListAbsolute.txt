@@ -77,3 +77,6 @@ C:\Users\user\Downloads\3_bimestre_DS-main\vitoriaLanches2\vitoriaLanches2\obj\D
 C:\Users\user\Downloads\3_bimestre_DS-main\vitoriaLanches2\vitoriaLanches2\obj\Debug\net8.0-windows\vitoriaLanches2.genruntimeconfig.cache
 C:\Users\user\Downloads\3_bimestre_DS-main\vitoriaLanches2\vitoriaLanches2\obj\Debug\net8.0-windows\ref\vitoriaLanches2.dll
 C:\Users\user\Downloads\3_bimestre_DS-main\vitoriaLanches2\vitoriaLanches2\obj\Debug\net8.0-windows\vitoriaLanches2.GerenciarProd.resources
+U:\DS CRISTIANO\3_bimestre\vitoriaLanches2\vitoriaLanches2\obj\Debug\net8.0-windows\vitoriaLanches2.administrador.resources
+U:\DS CRISTIANO\3_bimestre\vitoriaLanches2\vitoriaLanches2\obj\Debug\net8.0-windows\vitoriaLanches2.cliente.resources
+U:\DS CRISTIANO\3_bimestre\vitoriaLanches2\vitoriaLanches2\obj\Debug\net8.0-windows\vitoriaLanches2.GerenciarProd.resources

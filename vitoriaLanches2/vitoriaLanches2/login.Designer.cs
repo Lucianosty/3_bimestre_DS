@@ -35,62 +35,84 @@
             label2 = new Label();
             label1 = new Label();
             panel1 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // btncadastrar
             // 
-            btncadastrar.Location = new Point(331, 357);
+            btncadastrar.BackColor = Color.FromArgb(43, 39, 39);
+            btncadastrar.FlatAppearance.BorderSize = 0;
+            btncadastrar.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 57, 43);
+            btncadastrar.FlatStyle = FlatStyle.Flat;
+            btncadastrar.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btncadastrar.ForeColor = Color.FromArgb(248, 180, 0);
+            btncadastrar.Location = new Point(313, 312);
             btncadastrar.Name = "btncadastrar";
-            btncadastrar.Size = new Size(75, 23);
+            btncadastrar.Size = new Size(119, 38);
             btncadastrar.TabIndex = 11;
             btncadastrar.Text = "Entrar";
-            btncadastrar.UseVisualStyleBackColor = true;
+            btncadastrar.UseVisualStyleBackColor = false;
             btncadastrar.Click += btncadastrar_Click;
             // 
             // textsenha
             // 
-            textsenha.Location = new Point(319, 292);
+            textsenha.Location = new Point(294, 261);
+            textsenha.Multiline = true;
             textsenha.Name = "textsenha";
-            textsenha.Size = new Size(100, 23);
+            textsenha.Size = new Size(155, 27);
             textsenha.TabIndex = 10;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(348, 252);
+            label3.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.FromArgb(248, 180, 0);
+            label3.Location = new Point(331, 220);
             label3.Name = "label3";
-            label3.Size = new Size(39, 15);
+            label3.Size = new Size(80, 25);
             label3.TabIndex = 9;
             label3.Text = "Senha";
             // 
             // textlogin
             // 
-            textlogin.Location = new Point(319, 184);
+            textlogin.Location = new Point(294, 163);
+            textlogin.Multiline = true;
             textlogin.Name = "textlogin";
-            textlogin.Size = new Size(100, 23);
+            textlogin.Size = new Size(155, 27);
             textlogin.TabIndex = 8;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(348, 152);
+            label2.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.FromArgb(248, 180, 0);
+            label2.Location = new Point(308, 130);
             label2.Name = "label2";
-            label2.Size = new Size(37, 15);
+            label2.Size = new Size(124, 25);
             label2.TabIndex = 7;
-            label2.Text = "Login";
+            label2.Text = "Username";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(348, 100);
+            label1.Font = new Font("Impact", 24F);
+            label1.ForeColor = Color.FromArgb(248, 180, 0);
+            label1.Location = new Point(327, 70);
             label1.Name = "label1";
-            label1.Size = new Size(34, 15);
+            label1.Size = new Size(87, 39);
             label1.TabIndex = 6;
-            label1.Text = "login";
+            label1.Text = "Login";
             // 
             // panel1
             // 
-            panel1.Location = new Point(3, 3);
+            panel1.BackColor = Color.FromArgb(43, 39, 39);
+            panel1.Controls.Add(btncadastrar);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(textsenha);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(textlogin);
+            panel1.Location = new Point(3, 2);
             panel1.Name = "panel1";
             panel1.Size = new Size(796, 447);
             panel1.TabIndex = 12;
@@ -99,19 +121,15 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(43, 39, 39);
             ClientSize = new Size(800, 450);
-            Controls.Add(btncadastrar);
-            Controls.Add(textsenha);
-            Controls.Add(label3);
-            Controls.Add(textlogin);
-            Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(panel1);
             Name = "login";
             Text = "login";
             Load += login_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
